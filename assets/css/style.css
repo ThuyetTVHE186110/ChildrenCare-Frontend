@@ -282,55 +282,124 @@ body {
 
 /* Auth Pages Styles */
 .auth-page {
-    background: linear-gradient(135deg, var(--light-gray) 0%, #ffffff 100%);
+    background: linear-gradient(135deg, var(--soft-pink) 0%, var(--soft-blue) 100%);
     min-height: 100vh;
+    position: relative;
+    overflow-y: auto;
 }
 
 .auth-header {
     background: transparent;
     box-shadow: none;
+    padding: 1rem 0;
+}
+
+.auth-main {
+    z-index: 2;
+    min-height: calc(100vh - 80px);
 }
 
 .auth-card {
-    background: linear-gradient(135deg, var(--white) 0%, var(--soft-pink) 50%, var(--soft-blue) 100%);
+    background: rgba(255, 255, 255, 0.95);
     padding: 2.5rem;
-    border-radius: 20px;
+    border-radius: 30px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    margin-top: 2rem;
+    z-index: 2;
+    transition: all 0.3s ease;
 }
 
-.auth-header h2 {
-    color: var(--primary-color);
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
+.auth-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
 }
 
-.auth-header p {
-    color: #666;
+.auth-logo {
+    background: var(--primary-soft);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.auth-form .input-group {
+    border-radius: 15px;
+    overflow: hidden;
 }
 
 .auth-form .input-group-text {
-    background: var(--light-gray);
     border: none;
-    color: var(--primary-color);
+    background: var(--light-gray);
+    padding: 0.75rem 1.25rem;
 }
 
 .auth-form .form-control {
     border: none;
-    padding: 0.75rem 1rem;
+    padding: 0.75rem 1.25rem;
     font-size: 1rem;
     background: var(--light-gray);
 }
 
 .auth-form .form-control:focus {
     box-shadow: none;
-    background: white;
+    background: var(--white);
 }
 
-.auth-form .input-group:focus-within {
-    box-shadow: 0 0 0 0.25rem rgba(76, 175, 80, 0.25);
+.auth-form .btn-light {
+    background: var(--light-gray);
+    border: none;
+}
+
+.auth-form .form-check-input:checked {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.auth-footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
+
+.auth-decorative-elements {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Responsive auth styles */
+@media (max-width: 991.98px) {
+
+
+    .auth-main {
+        min-height: calc(100vh - 60px);
+    }
+
+    .auth-card {
+        padding: 2rem;
+        margin: 1rem;
+    }
+
+    .auth-header .navbar-brand img {
+        height: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .auth-card {
+        margin: 1rem;
+    }
 }
 
 .forgot-password {
@@ -992,4 +1061,207 @@ body {
         left: auto;
         margin: 1rem 0;
     }
+}
+
+/* Enhanced Auth Styles */
+.auth-page {
+    background: linear-gradient(135deg, var(--soft-pink) 0%, var(--soft-blue) 100%);
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.auth-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2.5rem;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.logo-circle {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary-soft), var(--secondary-soft));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.logo-circle::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2));
+    animation: shine 2s infinite;
+}
+
+.logo-circle i {
+    color: var(--primary-color);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.auth-input {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.auth-input:focus-within {
+    box-shadow: 0 0 0 2px var(--primary-soft);
+}
+
+.auth-input .input-group-text {
+    background: transparent;
+    border: none;
+    color: var(--primary-color);
+    padding-left: 1.5rem;
+}
+
+.auth-input .form-control {
+    border: none;
+    padding: 1rem 1.5rem;
+    height: auto;
+    font-size: 1rem;
+    background: var(--light-gray);
+}
+
+.auth-input .form-control:focus {
+    background: var(--white);
+}
+
+.password-toggle {
+    color: var(--primary-color);
+    padding: 0 1.5rem;
+    border: none;
+    background: transparent;
+}
+
+.password-toggle:hover {
+    color: var(--accent-color);
+}
+
+.form-check-input {
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-top: 0.2rem;
+    cursor: pointer;
+}
+
+.form-check-label {
+    cursor: pointer;
+}
+
+.btn-primary {
+    padding: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.security-badges {
+    padding: 0.5rem;
+    border-radius: 10px;
+    background: var(--light-gray);
+    display: inline-block;
+}
+
+/* Animations */
+@keyframes shine {
+    0% {
+        transform: translateX(-100%) rotate(45deg);
+    }
+
+    100% {
+        transform: translateX(100%) rotate(45deg);
+    }
+}
+
+/* Form validation styles */
+.form-control.is-invalid {
+    border-color: transparent;
+    background-image: none;
+}
+
+.auth-input.is-invalid {
+    box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.25);
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .auth-card {
+        padding: 2rem 1.5rem;
+        margin: 1rem;
+    }
+
+    .auth-input .form-control {
+        padding: 0.8rem 1rem;
+    }
+}
+
+/* Fix label positioning and scrolling */
+.auth-page {
+    background: linear-gradient(135deg, var(--soft-pink) 0%, var(--soft-blue) 100%);
+    min-height: 100vh;
+    position: relative;
+    overflow-y: auto;
+}
+
+/* Fix floating label position */
+.form-floating {
+    position: relative;
+}
+
+.form-floating>label {
+    position: absolute;
+    left: 0;
+    top: -25px;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    opacity: 0.8;
+    pointer-events: none;
+    margin-left: 5px;
+    transition: all 0.2s ease;
+}
+
+/* Remove the transform for focused state since label is already above */
+.form-floating>.form-control:focus~label,
+.form-floating>.form-control:not(:placeholder-shown)~label {
+    opacity: 1;
+    color: var(--primary-color);
+    transform: none;
+}
+
+/* Adjust input styles */
+.auth-input .form-control {
+    padding: 0.75rem 1rem;
+    height: 3rem;
+    line-height: 1.5;
+}
+
+.auth-input .input-group-text {
+    padding: 0.75rem 1rem;
+    line-height: 1.5;
+}
+
+/* Add margin to form groups for label space */
+.form-floating {
+    margin-top: 1.5rem;
 }

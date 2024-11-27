@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation Confirmed - Children Care System</title>
+    <meta name="description" content="Your healthcare service reservation has been confirmed">
+
+    <!-- Standard head includes -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Include Header -->
+    <header class="header fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <img src="assets/images/children-care-logo-removebg.png" alt="Children Care Logo" class="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <button class="nav-link dropdown-toggle btn btn-link" data-bs-toggle="dropdown">
+                                <a style="text-decoration: none; color: inherit;" href="/services">Services</a>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/services/pediatric">Pediatric Care</a></li>
+                                <li><a class="dropdown-item" href="/services/vaccination">Vaccination</a></li>
+                                <li><a class="dropdown-item" href="/services/development">Child Development</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/doctors">Our Doctors</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/blogs">Blogs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contact">Contact</a>
+                        </li>
+                        <li class="nav-item ms-lg-3">
+                            <a class="btn btn-primary rounded-pill px-4" href="/appointment">
+                                <i class="fas fa-calendar-check me-2"></i>Book Appointment
+                            </a>
+                        </li>
+                        <li class="nav-item ms-lg-2">
+                            <a class="btn btn-outline-primary rounded-pill px-4" href="/login">
+                                <i class="fas fa-user me-2"></i>Login
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Success Hero Section -->
+        <section class="success-hero">
+            <div class="container">
+                <div class="success-animation">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h1 class="display-4 fw-bold text-center mb-4">Reservation Confirmed!</h1>
+                <p class="lead text-center mb-0">Your reservation has been successfully submitted.</p>
+                <p class="text-center">Reservation ID: <span class="fw-bold" id="reservationId">RES-2024-001</span></p>
+            </div>
+        </section>
+
+        <!-- Success Content -->
+        <section class="success-content py-5">
+            <div class="container">
+                <div class="row">
+                    <!-- Main Content -->
+                    <div class="col-lg-8">
+                        <!-- Reservation Details -->
+                        <div class="content-card mb-4">
+                            <h2>Reservation Details</h2>
+                            <div class="reservation-info mt-4">
+                                <div class="row g-4">
+                                    <div class="col-md-6">
+                                        <h5>Assigned Healthcare Team</h5>
+                                        <div class="team-info">
+                                            <div class="doctor-info mb-3">
+                                                <p class="mb-1"><strong>Doctor:</strong></p>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="" alt="Doctor" id="doctorImage"
+                                                        class="team-member-avatar me-2">
+                                                    <div>
+                                                        <p class="mb-0 fw-bold" id="doctorName">Dr. Sarah Wilson</p>
+                                                        <small class="text-muted"
+                                                            id="doctorSpecialty">Pediatrician</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="nurse-info">
+                                                <p class="mb-1"><strong>Nurse:</strong></p>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="" alt="Nurse" id="nurseImage"
+                                                        class="team-member-avatar me-2">
+                                                    <div>
+                                                        <p class="mb-0 fw-bold" id="nurseName">Emily Brown</p>
+                                                        <small class="text-muted">Pediatric Nurse</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h5>Contact Information</h5>
+                                        <ul class="list-unstyled contact-details">
+                                            <li><i class="fas fa-user me-2"></i><span id="customerName"></span></li>
+                                            <li><i class="fas fa-envelope me-2"></i><span id="customerEmail"></span>
+                                            </li>
+                                            <li><i class="fas fa-phone me-2"></i><span id="customerPhone"></span></li>
+                                            <li><i class="fas fa-map-marker-alt me-2"></i><span
+                                                    id="customerAddress"></span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Payment Instructions -->
+                        <div class="content-card mb-4">
+                            <h2>Payment Instructions</h2>
+                            <div class="payment-info mt-4">
+                                <div class="alert alert-info" role="alert">
+                                    <i class="fas fa-info-circle me-2"></i>
+                                    Please complete your payment within 24 hours to confirm your reservation.
+                                </div>
+
+                                <div class="bank-accounts mt-4">
+                                    <h5>Bank Transfer Details</h5>
+                                    <div class="bank-account-list" id="bankAccounts">
+                                        <!-- Bank accounts will be loaded dynamically -->
+                                    </div>
+                                </div>
+
+                                <div class="payment-notes mt-4">
+                                    <h5>Important Notes</h5>
+                                    <ul>
+                                        <li>Include your Reservation ID (<span id="paymentRefId">RES-2024-001</span>) in
+                                            the transfer description</li>
+                                        <li>Keep your payment receipt for verification</li>
+                                        <li>After payment, please email your receipt to <span
+                                                id="paymentEmail">payments@childrencare.com</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Next Steps -->
+                        <div class="content-card">
+                            <h2>Next Steps</h2>
+                            <div class="steps-info mt-4">
+                                <div class="step-list">
+                                    <div class="step-item">
+                                        <div class="step-number">1</div>
+                                        <div class="step-content">
+                                            <h5>Complete Payment</h5>
+                                            <p>Transfer the payment using the provided bank details</p>
+                                        </div>
+                                    </div>
+                                    <div class="step-item">
+                                        <div class="step-number">2</div>
+                                        <div class="step-content">
+                                            <h5>Payment Confirmation</h5>
+                                            <p>Send your payment receipt via email</p>
+                                        </div>
+                                    </div>
+                                    <div class="step-item">
+                                        <div class="step-number">3</div>
+                                        <div class="step-content">
+                                            <h5>Appointment Confirmation</h5>
+                                            <p>Receive final confirmation and appointment details</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="col-lg-4">
+                        <!-- Search Box -->
+                        <div class="sidebar-card mb-4">
+                            <h4>Search Services</h4>
+                            <div class="search-box">
+                                <input type="text" class="form-control" placeholder="Search services...">
+                                <button class="btn btn-primary">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Service Categories -->
+                        <div class="sidebar-card mb-4">
+                            <h4>Categories</h4>
+                            <ul class="category-list">
+                                <li><a href="#">Pediatric Care <span>(15)</span></a></li>
+                                <li><a href="#">Vaccination <span>(8)</span></a></li>
+                                <li><a href="#">Child Development <span>(12)</span></a></li>
+                                <li><a href="#">Emergency Care <span>(6)</span></a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Contact Information -->
+                        <div class="sidebar-card">
+                            <h4>Need Help?</h4>
+                            <div class="contact-info">
+                                <p><i class="fas fa-phone me-2"></i>+1 234 567 890</p>
+                                <p><i class="fas fa-envelope me-2"></i>support@childrencare.com</p>
+                                <p><i class="fas fa-clock me-2"></i>24/7 Emergency Support</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer bg-light py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-4">About Children Care</h5>
+                    <p class="text-muted">Providing comprehensive healthcare services for children with care,
+                        compassion, and expertise.</p>
+                    <div class="social-links mt-4">
+                        <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <h5 class="fw-bold mb-4">Quick Links</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="/services">Services</a></li>
+                        <li><a href="/blogs">Blogs</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/about">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5 class="fw-bold mb-4">Contact Info</h5>
+                    <ul class="list-unstyled contact-info">
+                        <li><i class="fas fa-phone text-primary"></i> +1 234 567 890</li>
+                        <li><i class="fas fa-envelope text-primary"></i> info@childrencare.com</li>
+                        <li><i class="fas fa-location-dot text-primary"></i> 123 Healthcare St, Medical City</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5 class="fw-bold mb-4">Newsletter</h5>
+                    <p class="text-muted">Subscribe for health tips and updates</p>
+                    <form class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your email">
+                            <button class="btn btn-primary" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom text-center mt-5 pt-4 border-top">
+                <p class="mb-0">© 2024 Children Care. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/reservation-success.js"></script>
+</body>
+
+</html>

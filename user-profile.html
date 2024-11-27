@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - Children Care System</title>
+    <meta name="description" content="Manage your profile information">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Include Header -->
+    <header class="header fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <img src="assets/images/children-care-logo-removebg.png" alt="Children Care Logo" class="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <button class="nav-link dropdown-toggle btn btn-link" data-bs-toggle="dropdown">
+                                <a style="text-decoration: none; color: inherit;" href="/services">Services</a>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/services/pediatric">Pediatric Care</a></li>
+                                <li><a class="dropdown-item" href="/services/vaccination">Vaccination</a></li>
+                                <li><a class="dropdown-item" href="/services/development">Child Development</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/doctors">Our Doctors</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/blogs">Blogs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contact">Contact</a>
+                        </li>
+                        <li class="nav-item ms-lg-3">
+                            <a class="btn btn-primary rounded-pill px-4" href="/appointment">
+                                <i class="fas fa-calendar-check me-2"></i>Book Appointment
+                            </a>
+                        </li>
+                        <li class="nav-item ms-lg-2">
+                            <a class="btn btn-outline-primary rounded-pill px-4" href="/login">
+                                <i class="fas fa-user me-2"></i>Login
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <main id="main-content">
+        <!-- Profile Hero Section -->
+        <section class="profile-hero">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
+                        <li class="breadcrumb-item active">My Profile</li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Profile Content -->
+        <section class="profile-content py-5">
+            <div class="container">
+                <div class="row">
+                    <!-- Sidebar Navigation -->
+                    <div class="col-lg-3">
+                        <div class="profile-sidebar rounded-4 shadow-sm p-4">
+                            <div class="user-info text-center mb-4">
+                                <div class="avatar-wrapper position-relative">
+                                    <img src="" alt="Profile Avatar" id="userAvatar"
+                                        class="profile-avatar rounded-circle shadow-sm">
+                                    <label for="avatarUpload" class="avatar-upload-btn position-absolute">
+                                        <i class="fas fa-camera"></i>
+                                        <span class="upload-tooltip">Change Photo</span>
+                                    </label>
+                                    <input type="file" id="avatarUpload" accept="image/*" class="d-none">
+                                </div>
+                                <h4 class="user-name mt-3 mb-1 fw-semibold" id="sidebarUserName">John Doe</h4>
+                                <p class="user-email text-muted small mb-0" id="sidebarUserEmail">john@example.com</p>
+                            </div>
+                            <div class="profile-nav d-flex flex-column gap-2">
+                                <a href="#profileInformationContent"
+                                    class="nav-link rounded-3 p-3 d-flex align-items-center active"
+                                    data-tab="profileInformation">
+                                    <i class="fas fa-user me-3"></i>Profile Information
+                                    <i class="fas fa-chevron-right ms-auto"></i>
+                                </a>
+                                <a href="#changePasswordContent"
+                                    class="nav-link rounded-3 p-3 d-flex align-items-center" data-tab="changePassword">
+                                    <i class="fas fa-lock me-3"></i>Change Password
+                                    <i class="fas fa-chevron-right ms-auto"></i>
+                                </a>
+                                <a href="#myReservationsContent"
+                                    class="nav-link rounded-3 p-3 d-flex align-items-center" data-tab="myReservations">
+                                    <i class="fas fa-calendar-check me-3"></i>My Reservations
+                                    <i class="fas fa-chevron-right ms-auto"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Main Content -->
+                    <div class="col-lg-9">
+                        <!-- Profile Information Tab -->
+                        <div class="content-card bg-white rounded-4 shadow-sm p-4 tab-content active"
+                            id="profileInformationContent">
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <h2 class="h3 fw-semibold mb-0">Profile Information</h2>
+                                <button type="button" class="btn btn-primary rounded-3" id="editProfileBtn">
+                                    <i class="fas fa-edit me-2"></i>Edit Profile
+                                </button>
+                            </div>
+
+                            <form id="profileForm" class="needs-validation" novalidate>
+                                <div class="row g-4">
+                                    <!-- Personal Information -->
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control rounded-3" id="firstName"
+                                                placeholder="First Name" required>
+                                            <label for="firstName">First Name</label>
+                                            <div class="invalid-feedback">Please enter your first name</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control rounded-3" id="lastName"
+                                                placeholder="Last Name" required>
+                                            <label for="lastName">Last Name</label>
+                                            <div class="invalid-feedback">Please enter your last name</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Email Address</label>
+                                        <input type="email" class="form-control" id="email" readonly>
+                                        <small class="text-muted">Email cannot be changed</small>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Phone Number</label>
+                                        <input type="tel" class="form-control" id="phone" required>
+                                        <div class="invalid-feedback">Please enter a valid phone number</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Gender</label>
+                                        <select class="form-select" id="gender" required>
+                                            <option value="">Select gender</option>
+                                            <option value="male">Male</option>
+                                            <option value="female">Female</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                        <div class="invalid-feedback">Please select your gender</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Date of Birth</label>
+                                        <input type="date" class="form-control" id="birthDate">
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label">Address</label>
+                                        <textarea class="form-control" id="address" rows="3" required></textarea>
+                                        <div class="invalid-feedback">Please enter your address</div>
+                                    </div>
+
+                                    <!-- Form Actions -->
+                                    <div class="col-12 text-end">
+                                        <button type="button" class="btn btn-outline-secondary me-2" id="cancelEditBtn">
+                                            Cancel
+                                        </button>
+                                        <button type="submit" class="btn btn-primary">
+                                            <span class="btn-text">
+                                                <i class="fas fa-save me-2"></i>Save Changes
+                                            </span>
+                                            <span class="btn-loader d-none">
+                                                <i class="fas fa-circle-notch fa-spin"></i>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Change Password Tab -->
+                        <div class="content-card bg-white rounded-4 shadow-sm p-4 tab-content d-none"
+                            id="changePasswordContent">
+                            <h2 class="mb-4">Change Password</h2>
+                            <form id="changePasswordForm" class="needs-validation" novalidate>
+                                <div class="row g-4">
+                                    <div class="col-md-12">
+                                        <label class="form-label">Current Password</label>
+                                        <div class="input-group">
+                                            <input type="password" class="form-control" id="currentPassword" required>
+                                            <button class="btn btn-outline-secondary toggle-password" type="button">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                        </div>
+                                        <div class="invalid-feedback">Please enter your current password</div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label class="form-label">New Password</label>
+                                        <div class="input-group">
+                                            <input type="password" class="form-control" id="newPassword" required
+                                                pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$">
+                                            <button class="btn btn-outline-secondary toggle-password" type="button">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                        </div>
+                                        <div class="invalid-feedback">Password must be at least 8 characters with
+                                            letters and numbers</div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label class="form-label">Confirm New Password</label>
+                                        <div class="input-group">
+                                            <input type="password" class="form-control" id="confirmPassword" required>
+                                            <button class="btn btn-outline-secondary toggle-password" type="button">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                        </div>
+                                        <div class="invalid-feedback">Passwords do not match</div>
+                                    </div>
+                                    <div class="col-12 text-end">
+                                        <button type="submit" class="btn btn-primary">
+                                            <span class="btn-text">
+                                                <i class="fas fa-key me-2"></i>Update Password
+                                            </span>
+                                            <span class="btn-loader d-none">
+                                                <i class="fas fa-circle-notch fa-spin"></i>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- My Reservations Tab -->
+                        <div class="content-card bg-white rounded-4 shadow-sm p-4 tab-content d-none"
+                            id="myReservationsContent">
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <h2>My Reservations</h2>
+                                <a href="/services" class="btn btn-primary">
+                                    <i class="fas fa-plus me-2"></i>Book New Service
+                                </a>
+                            </div>
+
+                            <!-- Reservations Filter -->
+                            <div class="reservations-filter mb-4">
+                                <div class="row g-3">
+                                    <div class="col-md-4">
+                                        <select class="form-select" id="statusFilter">
+                                            <option value="all">All Status</option>
+                                            <option value="pending">Pending</option>
+                                            <option value="confirmed">Confirmed</option>
+                                            <option value="completed">Completed</option>
+                                            <option value="cancelled">Cancelled</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <input type="date" class="form-control" id="dateFilter">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Search reservations..."
+                                                id="searchReservation">
+                                            <button class="btn btn-outline-secondary" type="button">
+                                                <i class="fas fa-search"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Reservations List -->
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Service</th>
+                                            <th>Date</th>
+                                            <th>Status</th>
+                                            <th>Total</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="reservationsTableBody">
+                                        <!-- Reservations will be loaded dynamically -->
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Pagination -->
+                            <nav aria-label="Reservations pagination" class="mt-4">
+                                <ul class="pagination justify-content-center" id="reservationsPagination">
+                                    <!-- Pagination will be generated dynamically -->
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer bg-light py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-4">About Children Care</h5>
+                    <p class="text-muted">Providing comprehensive healthcare services for children with care,
+                        compassion, and expertise.</p>
+                    <div class="social-links mt-4">
+                        <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <h5 class="fw-bold mb-4">Quick Links</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="/services">Services</a></li>
+                        <li><a href="/blogs">Blogs</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/about">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5 class="fw-bold mb-4">Contact Info</h5>
+                    <ul class="list-unstyled contact-info">
+                        <li><i class="fas fa-phone text-primary"></i> +1 234 567 890</li>
+                        <li><i class="fas fa-envelope text-primary"></i> info@childrencare.com</li>
+                        <li><i class="fas fa-location-dot text-primary"></i> 123 Healthcare St, Medical City</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5 class="fw-bold mb-4">Newsletter</h5>
+                    <p class="text-muted">Subscribe for health tips and updates</p>
+                    <form class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your email">
+                            <button class="btn btn-primary" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom text-center mt-5 pt-4 border-top">
+                <p class="mb-0">© 2024 Children Care. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/profile.js"></script>
+</body>
+
+</html>

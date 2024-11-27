@@ -73,7 +73,7 @@ async function handleLogin(e) {
             localStorage.setItem('authToken', response.token);
 
             // Redirect based on user role
-            window.location.href = response.redirectUrl || '/dashboard';
+            handleLoginSuccess(response.user.role);
         } else {
             showError(response.message || 'Login failed. Please try again.');
         }
@@ -288,4 +288,20 @@ async function sendResetLink(email) {
         success: true,
         message: 'Reset link sent successfully'
     };
+}
+
+function handleLoginSuccess(userRole) {
+    switch (userRole) {
+        case 'manager':
+            window.location.href = '/manager/dashboard';
+            break;
+        case 'staff':
+            window.location.href = '/staff/dashboard';
+            break;
+        case 'admin':
+            window.location.href = '/admin/dashboard';
+            break;
+        default:
+            window.location.href = '/my-reservations';
+    }
 } 

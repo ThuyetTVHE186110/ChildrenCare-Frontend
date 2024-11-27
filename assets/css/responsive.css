@@ -1,0 +1,192 @@
+/* Responsive CSS */
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+    .top-bar {
+        display: none;
+    }
+
+    .header {
+        top: 0;
+        position: fixed;
+    }
+
+    .hero-section {
+        padding-top: 120px;
+    }
+
+    #main-content {
+        padding-top: 0;
+    }
+
+    .hero-image-wrapper {
+        margin-top: 3rem;
+    }
+
+    .experience-badge {
+        right: 0;
+        bottom: 0;
+        padding: 1.5rem;
+    }
+
+    .why-choose-content {
+        margin-top: 3rem;
+    }
+
+    .floating-card {
+        display: none;
+    }
+
+    .trust-indicators {
+        margin-top: 2rem;
+    }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    .hero-section {
+        text-align: center;
+        padding-top: 100px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .trust-item {
+        margin-bottom: 1rem;
+    }
+
+    .stat-card {
+        margin-bottom: 1rem;
+    }
+
+    .testimonial-card {
+        margin-bottom: 2rem;
+    }
+
+    .auth-card {
+        padding: 1.5rem;
+    }
+
+    .feature-card {
+        margin-bottom: 1.5rem;
+    }
+
+    .footer {
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+
+    .footer-links {
+        margin-bottom: 2rem;
+    }
+
+    .newsletter-form {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .hero-buttons .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .hero-buttons .btn:last-child {
+        margin-bottom: 0;
+    }
+
+    .navbar-brand .logo {
+        height: 40px;
+    }
+
+    .experience-badge {
+        position: relative;
+        right: 0;
+        bottom: 0;
+        margin-top: 1rem;
+    }
+
+    .back-to-top {
+        right: 15px;
+        bottom: 15px;
+    }
+
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Custom breakpoint for specific elements */
+@media (max-width: 400px) {
+    .trust-item {
+        padding: 1rem;
+    }
+
+    .trust-item h5 {
+        font-size: 0.9rem;
+    }
+
+    .trust-item p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Height-based media queries */
+@media (max-height: 700px) {
+    .hero-section {
+        min-height: auto;
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+}
+
+/* Print styles */
+@media print {
+
+    .header,
+    .footer,
+    .back-to-top,
+    .floating-gradient,
+    .decorative-circle {
+        display: none !important;
+    }
+
+    .hero-section {
+        padding: 20px 0;
+        background: none;
+    }
+
+    .container {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    body {
+        color: #000;
+    }
+
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+}

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pediatric Care Services - Children Care System</title>
+    <meta name="description" content="Comprehensive pediatric care services for your child's health and well-being">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Include Header -->
+    <header class="header fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <img src="assets/images/children-care-logo-removebg.png" alt="Children Care Logo" class="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <button class="nav-link dropdown-toggle btn btn-link" data-bs-toggle="dropdown">
+                                <a style="text-decoration: none; color: inherit;" href="/services">Services</a>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/services/pediatric">Pediatric Care</a></li>
+                                <li><a class="dropdown-item" href="/services/vaccination">Vaccination</a></li>
+                                <li><a class="dropdown-item" href="/services/development">Child Development</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/doctors">Our Doctors</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/blogs">Blogs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contact">Contact</a>
+                        </li>
+                        <li class="nav-item ms-lg-3">
+                            <a class="btn btn-primary rounded-pill px-4" href="/appointment">
+                                <i class="fas fa-calendar-check me-2"></i>Book Appointment
+                            </a>
+                        </li>
+                        <li class="nav-item ms-lg-2">
+                            <a class="btn btn-outline-primary rounded-pill px-4" href="/login">
+                                <i class="fas fa-user me-2"></i>Login
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Service Hero Section -->
+        <section class="service-detail-hero">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                                <li class="breadcrumb-item"><a href="/services">Services</a></li>
+                                <li class="breadcrumb-item active">Pediatric Care</li>
+                            </ol>
+                        </nav>
+                        <h1 class="display-4 fw-bold mb-4">Pediatric Care Services</h1>
+                        <p class="lead mb-4">Expert medical care for infants, children, and adolescents, ensuring their
+                            healthy growth and development.</p>
+                        <div class="d-flex gap-3">
+                            <a href="/appointment" class="btn btn-primary btn-lg rounded-pill">
+                                <i class="fas fa-calendar-check me-2"></i>Book Appointment
+                            </a>
+                            <a href="#learn-more" class="btn btn-outline-primary btn-lg rounded-pill">
+                                <i class="fas fa-arrow-down me-2"></i>Learn More
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="service-detail-image">
+                            <img src="assets/images/pediatric-care.jpg" alt="Pediatric Care"
+                                class="img-fluid rounded-4">
+                            <div class="service-highlight">
+                                <div class="highlight-item">
+                                    <i class="fas fa-user-md"></i>
+                                    <h4>Expert Pediatricians</h4>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-clock"></i>
+                                    <h4>24/7 Care</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Features -->
+        <section id="learn-more" class="service-features py-5">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-stethoscope"></i>
+                            </div>
+                            <h3>Regular Check-ups</h3>
+                            <p>Comprehensive health assessments to monitor your child's growth and development.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-heartbeat"></i>
+                            </div>
+                            <h3>Preventive Care</h3>
+                            <p>Proactive healthcare measures to prevent illnesses and maintain optimal health.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-shield-virus"></i>
+                            </div>
+                            <h3>Immunizations</h3>
+                            <p>Complete vaccination programs following international healthcare standards.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Details -->
+        <section class="service-details py-5 bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="content-card">
+                            <h2>What We Offer</h2>
+                            <p class="lead">Our pediatric care services are designed to provide comprehensive healthcare
+                                for children of all ages.</p>
+
+                            <div class="service-list">
+                                <div class="service-item">
+                                    <h3><i class="fas fa-check-circle text-primary me-2"></i>Well-Child Visits</h3>
+                                    <p>Regular check-ups to monitor growth, development, and overall health status.</p>
+                                </div>
+                                <div class="service-item">
+                                    <h3><i class="fas fa-check-circle text-primary me-2"></i>Sick Child Care</h3>
+                                    <p>Prompt medical attention for illnesses, infections, and other health concerns.
+                                    </p>
+                                </div>
+                                <div class="service-item">
+                                    <h3><i class="fas fa-check-circle text-primary me-2"></i>Developmental Screening
+                                    </h3>
+                                    <p>Regular assessments of physical, cognitive, and social development milestones.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Why Choose Us -->
+                        <div class="content-card mt-4">
+                            <h2>Why Choose Our Pediatric Care?</h2>
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="benefit-card">
+                                        <i class="fas fa-user-md"></i>
+                                        <h4>Expert Team</h4>
+                                        <p>Experienced pediatricians and healthcare professionals</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="benefit-card">
+                                        <i class="fas fa-hospital"></i>
+                                        <h4>Modern Facilities</h4>
+                                        <p>State-of-the-art medical equipment and child-friendly environment</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="col-lg-4">
+                        <div class="sidebar-card appointment-card">
+                            <h3>Book an Appointment</h3>
+                            <form id="appointmentForm" class="appointment-form">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" placeholder="Child's Name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" placeholder="Parent's Name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" placeholder="Email Address" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="tel" class="form-control" placeholder="Phone Number" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="date" class="form-control" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">
+                                    Book Appointment
+                                </button>
+                            </form>
+                        </div>
+
+                        <div class="sidebar-card contact-card mt-4">
+                            <h3>Emergency Contact</h3>
+                            <div class="contact-info">
+                                <p><i class="fas fa-phone text-primary me-2"></i>+1 234 567 890</p>
+                                <p><i class="fas fa-envelope text-primary me-2"></i>pediatric@childrencare.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">What Parents Say</h2>
+                <div class="row testimonials-slider" id="testimonialSlider">
+                    <!-- Testimonials will be loaded dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="cta-card text-center">
+                            <h2 class="mb-4">Ready to Schedule an Appointment?</h2>
+                            <p class="lead mb-4">Give your child the best care they deserve. Book an appointment today.
+                            </p>
+                            <a href="/appointment" class="btn btn-primary btn-lg rounded-pill">
+                                <i class="fas fa-calendar-check me-2"></i>Book Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer bg-light py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-4">About Children Care</h5>
+                    <p class="text-muted">Providing comprehensive healthcare services for children with care,
+                        compassion, and expertise.</p>
+                    <div class="social-links mt-4">
+                        <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <h5 class="fw-bold mb-4">Quick Links</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="/services">Services</a></li>
+                        <li><a href="/blogs">Blogs</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/about">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5 class="fw-bold mb-4">Contact Info</h5>
+                    <ul class="list-unstyled contact-info">
+                        <li><i class="fas fa-phone text-primary"></i> +1 234 567 890</li>
+                        <li><i class="fas fa-envelope text-primary"></i> info@childrencare.com</li>
+                        <li><i class="fas fa-location-dot text-primary"></i> 123 Healthcare St, Medical City</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5 class="fw-bold mb-4">Newsletter</h5>
+                    <p class="text-muted">Subscribe for health tips and updates</p>
+                    <form class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your email">
+                            <button class="btn btn-primary" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom text-center mt-5 pt-4 border-top">
+                <p class="mb-0">© 2024 Children Care. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/service-detail.js"></script>
+</body>
+
+</html>

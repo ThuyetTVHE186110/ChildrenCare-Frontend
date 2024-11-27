@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment - Children Care System</title>
+    <meta name="description" content="Schedule an appointment with our expert pediatricians">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Include Header -->
+    <header class="header fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <img src="assets/images/children-care-logo-removebg.png" alt="Children Care Logo" class="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <button class="nav-link dropdown-toggle btn btn-link" data-bs-toggle="dropdown">
+                                <a style="text-decoration: none; color: inherit;" href="/services">Services</a>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/services/pediatric">Pediatric Care</a></li>
+                                <li><a class="dropdown-item" href="/services/vaccination">Vaccination</a></li>
+                                <li><a class="dropdown-item" href="/services/development">Child Development</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/doctors">Our Doctors</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/blogs">Blogs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contact">Contact</a>
+                        </li>
+                        <li class="nav-item ms-lg-3">
+                            <a class="btn btn-primary rounded-pill px-4" href="/appointment">
+                                <i class="fas fa-calendar-check me-2"></i>Book Appointment
+                            </a>
+                        </li>
+                        <li class="nav-item ms-lg-2">
+                            <a class="btn btn-outline-primary rounded-pill px-4" href="/login">
+                                <i class="fas fa-user me-2"></i>Login
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Appointment Hero Section -->
+        <section class="appointment-hero">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                                <li class="breadcrumb-item active">Book Appointment</li>
+                            </ol>
+                        </nav>
+                        <h1 class="display-4 fw-bold mb-4">Book Your Appointment</h1>
+                        <p class="lead mb-4">Schedule a visit with our expert pediatricians for your child's healthcare
+                            needs.</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="assets/images/appointment-hero.jpg" alt="Book Appointment"
+                            class="img-fluid rounded-4">
+                    </div>
+                </div>
+                <div class="shape-blob"></div>
+                <div class="shape-blob"></div>
+            </div>
+        </section>
+
+        <!-- Appointment Form Section -->
+        <section class="appointment-form-section py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="appointment-card">
+                            <form id="appointmentForm" class="needs-validation" novalidate>
+                                <!-- Patient Information -->
+                                <div class="form-section mb-5">
+                                    <h3 class="section-title">Patient Information</h3>
+                                    <div class="row g-4">
+                                        <div class="col-md-6">
+                                            <label class="form-label">Child's Full Name</label>
+                                            <input type="text" class="form-control" required>
+                                            <div class="invalid-feedback">Please enter child's name</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Date of Birth</label>
+                                            <input type="date" class="form-control" required>
+                                            <div class="invalid-feedback">Please select date of birth</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Gender</label>
+                                            <select class="form-select" required>
+                                                <option value="">Select gender</option>
+                                                <option value="male">Male</option>
+                                                <option value="female">Female</option>
+                                            </select>
+                                            <div class="invalid-feedback">Please select gender</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Parent/Guardian Information -->
+                                <div class="form-section mb-5">
+                                    <h3 class="section-title">Parent/Guardian Information</h3>
+                                    <div class="row g-4">
+                                        <div class="col-md-6">
+                                            <label class="form-label">Full Name</label>
+                                            <input type="text" class="form-control" required>
+                                            <div class="invalid-feedback">Please enter your name</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Relationship to Patient</label>
+                                            <select class="form-select" required>
+                                                <option value="">Select relationship</option>
+                                                <option value="parent">Parent</option>
+                                                <option value="guardian">Legal Guardian</option>
+                                                <option value="other">Other</option>
+                                            </select>
+                                            <div class="invalid-feedback">Please select relationship</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Phone Number</label>
+                                            <input type="tel" class="form-control" required>
+                                            <div class="invalid-feedback">Please enter phone number</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Email Address</label>
+                                            <input type="email" class="form-control" required>
+                                            <div class="invalid-feedback">Please enter valid email</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Appointment Details -->
+                                <div class="form-section mb-5">
+                                    <h3 class="section-title">Appointment Details</h3>
+                                    <div class="row g-4">
+                                        <div class="col-md-6">
+                                            <label class="form-label">Service Type</label>
+                                            <select class="form-select" id="serviceType" required>
+                                                <option value="">Select service</option>
+                                                <option value="checkup">Regular Check-up</option>
+                                                <option value="vaccination">Vaccination</option>
+                                                <option value="consultation">Consultation</option>
+                                                <option value="emergency">Emergency Care</option>
+                                            </select>
+                                            <div class="invalid-feedback">Please select service type</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Preferred Doctor</label>
+                                            <select class="form-select" id="doctorSelect">
+                                                <option value="">Select doctor (Optional)</option>
+                                                <!-- Options will be loaded dynamically -->
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Preferred Date</label>
+                                            <input type="date" class="form-control" id="appointmentDate" required>
+                                            <div class="invalid-feedback">Please select preferred date</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Preferred Time</label>
+                                            <select class="form-select" id="appointmentTime" required>
+                                                <option value="">Select time slot</option>
+                                                <!-- Time slots will be loaded dynamically -->
+                                            </select>
+                                            <div class="invalid-feedback">Please select preferred time</div>
+                                        </div>
+                                        <div class="col-12">
+                                            <label class="form-label">Reason for Visit</label>
+                                            <textarea class="form-control" rows="3" required></textarea>
+                                            <div class="invalid-feedback">Please provide reason for visit</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Additional Information -->
+                                <div class="form-section mb-5">
+                                    <h3 class="section-title">Additional Information</h3>
+                                    <div class="row g-4">
+                                        <div class="col-12">
+                                            <label class="form-label">Any specific concerns or symptoms?</label>
+                                            <textarea class="form-control" rows="3"></textarea>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" required>
+                                                <label class="form-check-label">
+                                                    I agree to the <a href="/terms">Terms of Service</a> and
+                                                    <a href="/privacy">Privacy Policy</a>
+                                                </label>
+                                                <div class="invalid-feedback">You must agree before submitting</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Submit Button -->
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary btn-lg rounded-pill px-5">
+                                        <span class="btn-text">
+                                            <i class="fas fa-calendar-check me-2"></i>Book Appointment
+                                        </span>
+                                        <span class="btn-loader d-none">
+                                            <i class="fas fa-circle-notch fa-spin"></i>
+                                        </span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="col-lg-4">
+                        <!-- Emergency Contact -->
+                        <div class="sidebar-card emergency-card mb-4">
+                            <h3><i class="fas fa-phone-alt me-2"></i>Emergency Contact</h3>
+                            <p class="lead">Need immediate assistance?</p>
+                            <a href="tel:+1234567890" class="btn btn-danger w-100 mb-3">
+                                <i class="fas fa-phone me-2"></i>Call Emergency: +123 456 7890
+                            </a>
+                            <p class="small mb-0">Available 24/7 for emergency cases</p>
+                        </div>
+
+                        <!-- Working Hours -->
+                        <div class="sidebar-card working-hours-card mb-4">
+                            <h3><i class="fas fa-clock me-2"></i>Working Hours</h3>
+                            <ul class="list-unstyled working-hours">
+                                <li>
+                                    <span>Monday - Friday</span>
+                                    <span>8:00 AM - 8:00 PM</span>
+                                </li>
+                                <li>
+                                    <span>Saturday</span>
+                                    <span>9:00 AM - 6:00 PM</span>
+                                </li>
+                                <li>
+                                    <span>Sunday</span>
+                                    <span>10:00 AM - 4:00 PM</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Location -->
+                        <div class="sidebar-card location-card">
+                            <h3><i class="fas fa-map-marker-alt me-2"></i>Location</h3>
+                            <p>123 Healthcare Street<br>Medical City, State 12345</p>
+                            <a href="https://maps.google.com" target="_blank" class="btn btn-outline-primary w-100">
+                                <i class="fas fa-directions me-2"></i>Get Directions
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer bg-light py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-4">About Children Care</h5>
+                    <p class="text-muted">Providing comprehensive healthcare services for children with care,
+                        compassion, and expertise.</p>
+                    <div class="social-links mt-4">
+                        <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <h5 class="fw-bold mb-4">Quick Links</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="/services">Services</a></li>
+                        <li><a href="/blogs">Blogs</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/about">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5 class="fw-bold mb-4">Contact Info</h5>
+                    <ul class="list-unstyled contact-info">
+                        <li><i class="fas fa-phone text-primary"></i> +1 234 567 890</li>
+                        <li><i class="fas fa-envelope text-primary"></i> info@childrencare.com</li>
+                        <li><i class="fas fa-location-dot text-primary"></i> 123 Healthcare St, Medical City</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5 class="fw-bold mb-4">Newsletter</h5>
+                    <p class="text-muted">Subscribe for health tips and updates</p>
+                    <form class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your email">
+                            <button class="btn btn-primary" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom text-center mt-5 pt-4 border-top">
+                <p class="mb-0">© 2024 Children Care. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/appointment.js"></script>
+</body>
+
+</html>
